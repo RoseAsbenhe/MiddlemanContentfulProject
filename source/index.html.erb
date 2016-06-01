@@ -9,5 +9,14 @@ title: Welcome to Middleman
   <h1>Middleman is Running</h1>
   <p class="doc">
     <%= link_to "Read Documentation Online", "https://middlemanapp.com", target: "_blank" %>
+
+    
+   <% data.contentful.product.each do |elem| %>
+     <% p = elem[1] %>
+     <li>
+     <%= p %>
+     </li>
+   <% end %>
+
   </p><!-- .doc -->
 </div><!-- .welcome -->

@@ -23,10 +23,12 @@ configure :development do
   activate :livereload
 end
 
-
 activate :contentful do |f|
-  f.access_token  = '267d41058d049409924c6b4315326df31854c91240def4a73bf195f95e6e5f77'
-  f.space         = { site: 'b3o0q75q67ev' }
+  f.access_token  = '360dc08f85cc57950a3e30d7309db525bcec2f96b5e5bfcc64e13d284a1c6bc8'
+  f.space         = { contentful: 'b3o0q75q67ev' }
+  f.cda_query     = { content_type: 'product', include: 1 }
+  f.content_types = { product: 'product'}
+  f.use_preview_api = true
 end
 ###
 # Helpers
